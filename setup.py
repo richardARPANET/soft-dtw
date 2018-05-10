@@ -60,7 +60,9 @@ if __name__ == '__main__':
           description=DESCRIPTION,
           license=LICENSE,
           url=URL,
-          install_requires=['scipy', 'numpy', 'cython', 'scikit-learn'],
+          install_requires=[
+              'scipy', 'numpy', 'cython', 'scikit-learn', 'chainer'
+          ],
           version=VERSION,
           download_url=DOWNLOAD_URL,
           long_description=LONG_DESCRIPTION,

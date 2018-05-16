@@ -7,7 +7,10 @@ import subprocess
 from setuptools import setup, Extension
 
 setup_requires = ['numpy', 'cython']
-subprocess.check_call(['pip', 'install', *setup_requires])
+FNULL = open(os.devnull, 'w')
+subprocess.check_call(
+    ['pip', 'install', *setup_requires], stdout=FNULL, stderr=subprocess.STDOUT
+)
 from Cython.Distutils import build_ext
 try:
     import numpy

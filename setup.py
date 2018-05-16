@@ -2,10 +2,13 @@ from __future__ import print_function
 import os
 import sys
 from codecs import open
+import subprocess
 
 from setuptools import setup, Extension
-from Cython.Distutils import build_ext
 
+setup_requires = ['numpy', 'cython']
+subprocess.check_call(['pip', 'install', *setup_requires])
+from Cython.Distutils import build_ext
 try:
     import numpy
 except ImportError:
@@ -33,7 +36,6 @@ extensions = [
 ]
 
 if __name__ == '__main__':
-
     setup(
           name=DISTNAME,
           maintainer=MAINTAINER,

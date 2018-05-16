@@ -4,7 +4,11 @@ import sys
 from codecs import open
 
 from distutils.core import setup, Extension
-from Cython.Distutils import build_ext
+try:
+    from Cython.Distutils import build_ext
+except ImportError:
+    print('Cython is required during installation')
+    sys.exit(1)
 
 try:
     import numpy
@@ -17,8 +21,8 @@ DISTNAME = 'soft-dtw'
 DESCRIPTION = "Python implementation of soft-DTW"
 with open('README.rst', 'r', encoding='utf-8') as rm_file:
     LONG_DESCRIPTION = rm_file.read()
-MAINTAINER = 'Mathieu Blondel'
-MAINTAINER_EMAIL = ''
+MAINTAINER = 'Richard O\'Dwyer'
+MAINTAINER_EMAIL = 'richard@richard.do'
 URL = 'https://github.com/mblondel/soft-dtw/'
 LICENSE = 'Simplified BSD'
 DOWNLOAD_URL = 'https://github.com/mblondel/soft-dtw/'

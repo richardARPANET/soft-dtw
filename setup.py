@@ -3,7 +3,7 @@ import os
 import sys
 from codecs import open
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 from Cython.Distutils import build_ext
 
 try:
@@ -21,7 +21,7 @@ MAINTAINER = 'Richard O\'Dwyer'
 MAINTAINER_EMAIL = 'richard@richard.do'
 URL = 'https://github.com/mblondel/soft-dtw/'
 LICENSE = 'Simplified BSD'
-DOWNLOAD_URL = 'https://github.com/mblondel/soft-dtw/'
+DOWNLOAD_URL = URL
 VERSION = '0.1.2.DEV0'
 
 extensions = [

@@ -4,11 +4,7 @@ import sys
 from codecs import open
 
 from distutils.core import setup, Extension
-try:
-    from Cython.Distutils import build_ext
-except ImportError:
-    print('Cython is required during installation')
-    sys.exit(1)
+from Cython.Distutils import build_ext
 
 try:
     import numpy

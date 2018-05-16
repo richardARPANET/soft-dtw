@@ -1,4 +1,4 @@
-0.1.1 (unreleased)
+0.1.1 (2018-05-16)
 ------------------
 
 - Add wheel to package release.
